@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Lançador de dados</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container__conteudo">
+            <div class="container__botoes">
+                <button onclick="rolar(4)" class="container__botao">d4</button>
+                <button onclick="rolar(6)" class="container__botao">d6</button>
+                <button onclick="rolar(8)" class="container__botao">d8</button>
+                <button onclick="rolar(10)" class="container__botao">d10</button>
+                <button onclick="rolar(12)" class="container__botao">d12</button>
+                <button onclick="rolar(20)" class="container__botao">d20</button>
+
+                <button onclick="alterarQuantidade(1)" class="container__botao">+ Dado</button>
+                <button onclick="alterarQuantidade(-1)" class="container__botao">- Dado</button>
+
+                <button onclick="alterarBonus(1)" class="container__botao">+ Bônus</button>
+                <button onclick="alterarBonus(-1)" class="container__botao">- Bônus</button>
+            </div>
+
+            <div class="container__resultados">
+                <div id="quantidade-dados" class="container__texto">
+                    <label class="texto__paragrafo">Quantidade de dados: 1</label>
+                </div>
+                <div id="bonus-dados" class="container__texto">
+                    <label class="texto__paragrafo">Bônus: 0</label>
+                </div>
+                <div id="resultado" class="container__texto">
+                    <label class="texto__paragrafo">Valores rolados: nenhum até agora</label>
+                </div>
+                <div id="Soma" class="container__texto">
+                    <label class="texto__paragrafo">Total: nenhum até agora</label>
+                </div>
+                <button onclick="reiniciar()" id="btn-reiniciar" class="container__botao-desabilitado">Reiniciar</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js" defer></script>
+</body>
+</html>
